@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
-import { verifyAccessToken } from '../utils/auth.js';
-import { AppError, asyncHandler } from '../utils/errors.js';
-import redis from '../config/redis.js';
+import { verifyAccessToken } from '@/utils/auth.js';
+import { AppError, asyncHandler } from '@/utils/errors.js';
+import redis from '@/config/redis.js';
 
 const router = express.Router();
 

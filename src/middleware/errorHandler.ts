@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { config } from '../config/index.js';
-import { AppError } from '../utils/errors.js';
-import { AuditLogModel } from '../models/auditLog.js';
+import { config } from '@/config/index.js';
+import { AppError } from '@/utils/errors.js';
+import { AuditLogModel } from '@/models/auditLog.js';
 
 interface ErrorWithCode extends Error {
   code?: string;
