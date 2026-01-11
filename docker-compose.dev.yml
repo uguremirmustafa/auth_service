@@ -45,20 +45,8 @@ services:
     container_name: auth_service_dev
     working_dir: /app
     command: sh -c "npm install && npm run dev"
-    environment:
-      NODE_ENV: development
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      DB_NAME: auth_service
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      JWT_SECRET: dev-secret-change-in-production
-      JWT_REFRESH_SECRET: dev-refresh-secret-change-in-production
-      JWT_EXPIRES_IN: 15m
-      JWT_REFRESH_EXPIRES_IN: 7d
-      PORT: 8000
+    env_file:
+      - .env.development
     ports:
       - '8000:8000'
     volumes:
