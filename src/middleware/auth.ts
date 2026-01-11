@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import { JwtPayload } from 'jsonwebtoken';
-import { verifyAccessToken } from '../utils/auth.js';
-import { AppError } from '../utils/errors.js';
-import redis from '../config/redis.js';
+import { verifyAccessToken } from '@/utils/auth.js';
+import { AppError } from '@/utils/errors.js';
+import redis from '@/config/redis.js';
 
 // Extend Express Request type to include user property
 /* eslint-disable @typescript-eslint/no-namespace */

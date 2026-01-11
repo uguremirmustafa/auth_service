@@ -1,12 +1,12 @@
 import express, { Request, Response } from 'express';
-import { UserModel } from '../models/user.js';
-import { RefreshTokenModel } from '../models/refreshToken.js';
-import { AuditLogModel } from '../models/auditLog.js';
-import { hashPassword, comparePassword, generateAccessToken } from '../utils/auth.js';
-import { AppError, asyncHandler } from '../utils/errors.js';
-import { authenticate } from '../middleware/auth.js';
-import { config } from '../config/index.js';
-import redis from '../config/redis.js';
+import { UserModel } from '@/models/user.js';
+import { RefreshTokenModel } from '@/models/refreshToken.js';
+import { AuditLogModel } from '@/models/auditLog.js';
+import { hashPassword, comparePassword, generateAccessToken } from '@/utils/auth.js';
+import { AppError, asyncHandler } from '@/utils/errors.js';
+import { authenticate } from '@/middleware/auth.js';
+import { config } from '@/config/index.js';
+import redis from '@/config/redis.js';
 
 const router = express.Router();
 

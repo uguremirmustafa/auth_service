@@ -1,5 +1,5 @@
-import { app } from './src/app.js';
-import { config } from './src/config/index.js';
+import { app } from '@/app.js';
+import { config } from '@/config/index.js';
 
 // Re-export for tests
 export { app };

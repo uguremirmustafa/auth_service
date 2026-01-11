@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express';
-import { UserModel } from '../models/user.js';
-import { query } from '../config/database.js';
-import { authenticate, authorize } from '../middleware/auth.js';
-import { AppError, asyncHandler } from '../utils/errors.js';
+import { UserModel } from '@/models/user.js';
+import { query } from '@/config/database.js';
+import { authenticate, authorize } from '@/middleware/auth.js';
+import { AppError, asyncHandler } from '@/utils/errors.js';
 
 const router = express.Router();
 

@@ -2,17 +2,17 @@ import express, { Request, Response } from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
 import { rateLimit } from 'express-rate-limit';
-import { config } from './config/index.js';
-import pool from './config/database.js';
-import redis from './config/redis.js';
-import { errorHandler, notFound } from './middleware/errorHandler.js';
+import { config } from '@/config/index.js';
+import pool from '@/config/database.js';
+import redis from '@/config/redis.js';
+import { errorHandler, notFound } from '@/middleware/errorHandler.js';
 
 // Import routes
-import authRoutes from './routes/auth.js';
-import verifyRoutes from './routes/verify.js';
-import roleRoutes from './routes/roles.js';
-import permissionRoutes from './routes/permissions.js';
-import userRoutes from './routes/users.js';
+import authRoutes from '@/routes/auth.js';
+import verifyRoutes from '@/routes/verify.js';
+import roleRoutes from '@/routes/roles.js';
+import permissionRoutes from '@/routes/permissions.js';
+import userRoutes from '@/routes/users.js';
 
 const app = express();
 

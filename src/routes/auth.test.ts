@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { app, closeConnections } from '../app.js';
+import { app, closeConnections } from '@/app.js';
 
 afterAll(async () => {
   await closeConnections();

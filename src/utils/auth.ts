@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 import jwt, { JwtPayload } from 'jsonwebtoken';
-import { config } from '../config/index.js';
+import { config } from '@/config/index.js';
 
 export const hashPassword = async (password: string): Promise<string> => {
   return bcrypt.hash(password, config.security.bcryptRounds);
