@@ -12,6 +12,9 @@ services:
       - '5432:5432'
     volumes:
       - postgres_data_dev:/var/lib/postgresql/data
+      # Mounts the local schema.sql file into the PostgreSQL container's initialization directory
+      # This file will be automatically executed when the database is first created
+      # The /docker-entrypoint-initdb.d/ directory is a special path where PostgreSQL runs all .sql scripts during container initialization
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres']
