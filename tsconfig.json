@@ -4,6 +4,10 @@
     "module": "ESNext",
     "lib": ["ES2022", "DOM"],
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "rootDir": "./",
     "outDir": "./dist",
     "esModuleInterop": true,

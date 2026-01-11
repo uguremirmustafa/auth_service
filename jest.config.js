@@ -12,6 +12,7 @@ export default {
   },
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
     '^(\.{1,2}/.*)\.js$': '$1',
   },
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
